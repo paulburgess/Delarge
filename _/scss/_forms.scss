@@ -1,0 +1,51 @@
+/* Email form */
+
+form.signup {
+	
+	margin-top: 25px;
+	padding-top: 25px;
+	border-top: 1px #CCC dotted;
+		
+		input[type='email']{
+			border:1px #CCC solid;
+			height: 35px;
+			padding:0 38px 0 10px;
+			outline: none;
+		}
+		
+		*[type='submit'] {
+			background: transparent;
+			color: $link;
+			height: 35px;
+			width: 35px;
+			border: 0;
+			padding:0 10px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			
+			&:hover {
+				color: $link-hover;
+			}
+
+		}
+		
+		span {
+			position: relative;
+			display: inline-block;
+			height: 35px
+		}
+		
+		label {
+			font-family: Georgia, Times, serif;
+			font-style: italic;
+			font-size: 0.8em;
+		}
+		
+		p {
+			font-size: 0.8em;
+			
+
+		}
+	
+}

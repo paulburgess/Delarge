@@ -1,0 +1,68 @@
+.featured-project img,
+.featured-project__caption { 
+    -webkit-animation-duration: 2s; 
+    animation-duration: 2s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both;
+    animation-delay:1.5s;
+	-webkit-animation-delay:1.5s;
+} 
+
+
+@-webkit-keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-30px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-30px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+
+@-webkit-keyframes fadeInDown2 { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-15px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes fadeInDown2 { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-15px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+
+.featured-project img
+{ 
+    -webkit-animation-name: fadeInDown; 
+    animation-name: fadeInDown; 
+}
+
+.featured-project__caption {
+    -webkit-animation-name: fadeInDown2; 
+    animation-name: fadeInDown2; 
+	
+}

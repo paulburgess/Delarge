@@ -1,0 +1,26 @@
+{
+  "convertHtml": {
+    "relativePaths": false
+  },
+  "customRuby": false,
+  "debug": false,
+  "domain": null,
+  "lintScripts": false,
+  "modelSource": null,
+  "preprocessorLocations": [
+    "_"
+  ],
+  "preprocessorScriptOutput": "_/js",
+  "preprocessorStyleOutput": "_/css",
+  "projectDescription": "BO!",
+  "projectName": "delarge",
+  "publishedId": "10695",
+  "serverHostname": null,
+  "serverPort": null,
+  "simpleModePartnerServer": null,
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "templateDirectory": "templates",
+  "type": "mixture",
+  "useCompass": false
+}

@@ -1,0 +1,60 @@
+footer {
+	@include wrapper;
+	margin-top: 25px;
+	padding-top: 25px;
+	border-top: 1px #CCC dotted;
+	padding-bottom: 50px;
+	line-height: 130%;
+
+	 p, li {
+		font-size: emCalc(14);
+		 		font-family: Arial, sans-serif;
+	 }
+
+
+	 a {
+	 	white-space: nowrap;
+		 color:$text;
+		 &:hover {
+			 color: $link-hover;
+		 }
+	 }
+	 
+	 .info {
+		 color: #999;
+		 font-size: 0.9em;
+		 font-family: Arial, Helvetica, sans-serif;
+		 position: relative;
+		 top:4px;
+		 
+		 	 @include breakpoint(emCalc(768)){
+		 	 	@include grid-span(7);
+		 	 }
+
+
+	 }
+	 
+	 
+	 @include breakpoint(emCalc(768)){
+	 
+
+	 	
+	 	padding-bottom: 120px;
+			 i.genericon {
+			 vertical-align: top;
+		 }
+	 
+	 }
+
+}
+
+
+.login {
+	@include breakpoint(emCalc(768)){
+		@include grid-span(3,10);
+	}
+
+	a {
+	font-size: emCalc(14);
+	}
+}

@@ -1,0 +1,34 @@
+header[role='banner']{
+		
+		background: #333;
+		padding: 10px 0;
+		
+		
+		
+/*
+		background-image: url('http://cdn.delargedesign.com/top-edge.png');
+		background-repeat: repeat-x;
+		background-position: left bottom;
+*/
+		position: relative;
+		z-index: 1;
+		
+		> div {
+			@include wrapper;
+		}
+		
+		img {
+			width:90px;
+			height: auto;
+
+			@include breakpoint(emCalc(768)){
+				width:120px;
+				height: auto;
+			}
+
+		}
+		
+		
+		
+		
+}

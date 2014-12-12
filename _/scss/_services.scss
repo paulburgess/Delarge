@@ -1,0 +1,25 @@
+div.services {
+/* ------------------------------------------- */	
+	
+	@include breakpoint(emCalc(768)){
+				@include grid-span(8);
+		}
+	
+	> ul {
+		
+		
+		@include breakpoint(max-width emCalc(767)){
+			@include block-grid(1);
+		}
+
+
+		@include breakpoint(emCalc(768)){
+			@include block-grid(2);
+		}
+		
+		
+	}
+	
+
+/* ------------------------------------------- */	
+}

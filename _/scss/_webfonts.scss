@@ -1,0 +1,50 @@
+.wf-loading {
+	
+	h1, h2, h3, h4,
+	.contact h3 {
+		visibility: hidden;
+	}
+	
+	
+	.work-link {
+			visibility: hidden;					
+	}
+	
+	div[role='main']{
+	
+		p, li {
+			visibility: hidden;			
+		}
+	}
+		
+}
+
+
+.wf-active {
+	
+	h1, h2, h3, h4,
+	.contact h3 {
+		font-family: "proxima-nova";
+		font-style: normal;
+		font-weight: 700;
+		visibility: visible;
+	}
+	
+	
+	.work-link {
+			visibility: visible;					
+		font-family: "proxima-nova";
+
+	}
+		
+	
+	
+	[role='main']{
+	
+		p, li {
+			font-family: "adelle";
+			visibility: visible;			
+		}
+	}
+		
+}

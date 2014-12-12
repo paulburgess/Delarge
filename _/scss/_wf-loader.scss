@@ -1,0 +1,76 @@
+.wf-loading:after {
+    /*
+    first up, we need
+    to define some content
+    */
+   
+    /* content: "loading fonts.."; */
+ 
+    /*
+    let's now give it some
+    dimensions, a background
+    color and position
+    it on the page
+    */
+   /*
+ width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+   
+*/
+    /*
+    okay, so what do we want
+    our label to actually
+    look like?
+    */
+  /*
+  color: #135040;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 20em;
+    text-align: center;
+*/
+}
+
+.wf-loading * {
+    /*
+    first things first, we need to hide everything,
+    but bear in mind that this will only take effect
+    once the loading script has taken effect.
+    here we're hiding all content within
+    the <html> once it has the class "wf-loading"
+    */
+    opacity: 0;
+}
+
+.wf-loading {
+    /*
+    here's a background image (at a meer 723bytes)
+    to indicate something's happening
+    */
+    background: url('http://cdnjs.cloudflare.com/ajax/libs/select2/3.2/spinner.gif') no-repeat center center;
+    /*
+    just to make sure the <html>
+    element shares the same dimensions as
+    the browser window when loading
+    (and not the potentially elongated page)
+    */
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.wf-active *,
+.wf-inactive * {
+    /*
+    add some transitional effects
+    to reintroduce the content
+    gradually once fonts are loaded
+    */
+    -webkit-transition: opacity 1s ease-out;
+    -moz-transition: opacity 1s ease-out;
+    -o-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+}
