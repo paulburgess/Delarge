@@ -671,25 +671,45 @@ header[role='banner'] {
 /* ------------------------------------------- */
 /* == Portfolio link */
 .portfolio-link {
-  text-align: center;
-  /* Add side lines?
-  	http://codepen.io/ahmedelgabri/pen/lfjdJ	
-  */ }
-  .portfolio-link a {
-    padding: 1.25em;
-    display: inline-block;
-    background: #FFF;
-    font-family: Georgia, Times, sans-serif;
-    font-style: italic;
-    color: #666; }
-    .portfolio-link a span {
-      color: #b31f4c; }
-    .portfolio-link a:hover {
-      color: #666;
-      background: rgba(255, 255, 255, 0.8); }
-      .portfolio-link a:hover span {
-        color: #de4070; }
+  text-align: center; }
 
+/*
+.portfolio-link {
+
+	text-align: center;
+	
+	
+	// Add side lines? http://codepen.io/ahmedelgabri/pen/lfjdJ	
+	
+	
+	a {
+		
+		padding: emCalc(20);
+		display: inline-block;
+		background: #FFF;
+		font-family: Georgia, Times, sans-serif;
+		font-style: italic;
+		color: $text;
+		
+		
+		span {
+			color: $link;
+		}
+		
+		&:hover {
+			color:$text;
+			background: rgba(255,255,255,0.8);
+			
+			span {
+				color:$link-hover;
+			}
+			
+		}
+			
+	}
+
+} 
+*/
 /* Showcase
 ------------------------------- */
 /* @import "showcase"; */
@@ -968,7 +988,9 @@ h1.page-header__title {
       float: none;
       position: static;
       display: block;
-      margin-bottom: 1.5625em; }
+      margin-bottom: 1.5625em;
+      position: relative;
+      right: 8px; }
     .work li > div {
       width: auto;
       float: none; }
