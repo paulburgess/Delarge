@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+<script type="text/javascript" src="//use.typekit.net/qur3ghe.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<meta http-eqiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<title>{% if page_title %}{{ page_title }} - {% endif %} Web design and development | Delarge</title>
+	{% if page_description %}<meta name="description" content="{{ page_description }}" />{% endif %}
+
+	{% if favicon %}<link rel="shortcut icon" href="{{ favicon }}">{% endif %}
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css" media="all" />
+	
+	<!--[if (gt IE 8) | (IEMobile)]><!-->
+	<link rel="stylesheet" href="http://delargedesign.com/_/css/screen.min.css">
+	<!--<![endif]-->
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<link rel="stylesheet" href="http://delargedesign.com/_/css/ie.css">
+	<![endif]-->
+
+
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script src="{{ template_url }}scripts/matchmedia.min.js"></script>
+	<script src="{{ template_url }}scripts/picturefill.custom.min.js"></script>
+	{{ custom_css }}
+	
+
+	{% if not is_preview %}
+	<script>this.top.location !== this.location && (this.top.location = this.location);</script>
+	<!-- BEGIN Analytics -->
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	
+	{% if analytics_code %}
+	_gaq.push(['_setAccount', '{{ analytics_code }}']);
+	_gaq.push(['_trackPageview']);
+	{% else %}
+	_gaq.push(['_setAccount', 'UA-6564188-11']);
+	_gaq.push(['_setDomainName', 'dunked.com']);
+	_gaq.push(['_setAllowLinker', true]);
+	_gaq.push(['_trackPageview']);
+	{% endif %}
+	
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+  	<!-- END Analytics -->
+  	{% endif %}
+  	
+
+
+
+
+
+</head>
+<body class="{{ body_class }} portfolio">
+
+	<div id="wrapper" class="clearfix">
+<header class="cf" itemscope itemtype="http://schema.org/LocalBusiness" role="banner">
+	
+			<div class="row">
+			
+
+{% if is_project %}
+<div class="small-6 large-8 columns">
+					
+					<a href="http://delargedesign.com/"><img src="http://cdn.delargedesign.com/d-logo-white.svg" alt="Delarge logo" /></a>
+
+</div> <!-- cols -->
+
+<div class="small-6 large-3 large-offset-1 columns">
+
+	<p class="work-link"><a href="/">Work&nbsp;<i class="genericon genericon-next"></i></a></p>
+
+</div> <!-- columns -->
+
+
+{% else %}
+
+<div class="large-12 columns">
+					
+					<a href="http://delargedesign.com/"><img src="http://cdn.delargedesign.com/d-logo-white.svg" alt="Delarge logo" /></a>
+
+</div>
+
+{% endif %}
+
+			</div> <!-- row -->
+
+</header>
+
+
+<div role="main">
+
+
+
+{% if is_home %}
+	
+<section class="showcase">
+	
+	<div class="row">
+
+	
+		<div class="large-6 columns">
+				
+				<div class="intro" itemscope>
+				
+					<h1>Featured web design <abbr title="and">&amp;</abbr> development work</h1>
+				
+				</div>
+
+				
+			</div> <!-- cols -->
+	
+
+
+			<div class="large-6 columns">
+				
+				<div class="featured-project">
+				
+					<img src="http://cdn.delargedesign.com/featured-home-doe_400.png" alt="Doe Boutique" />
+				
+				
+					<div class="featured-project__caption">
+						
+						<h2><span><span>Featured project</span></span></h2>
+						<h3><span><span>Doe Boutique</span></span></h3>
+						<p><span><span>Online shop for women's fashion&nbsp;boutique</span></span></p>
+						<p>
+							<span>
+								<span><a href="http://work.delargedesign.com/doe-fashion-boutique">
+										Read more&nbsp;<i class="genericon genericon-next"></i>
+									</a></span>
+							</span>
+						</p>
+					</div><!-- featured-project__caption -->
+					
+				</div> <!-- featured-project -->
+				
+
+			</div> <!-- cols -->
+
+		</div><!-- row -->	
+	
+</section> <!-- showcase -->
+		
+			
+
+
+
+{% elseif is_project %}
+
+<section class="showcase">
+	
+	<div class="intro" itemscope>
+	
+		<div class="row">
+	
+	
+			<div class="large-6 columns">
+					
+					
+					
+						<h1>{{ project.title }}</h1>
+					
+					
+	
+					
+				</div> <!-- cols -->
+		
+	
+				<!-- Hijacking the role field as a subtitle/desc -->
+				<div class="large-6 columns">
+					
+					<div class="project-subtitle">
+					
+						{% if project.role %}<h2>{{ project.role }}</h2>{% endif %}	
+	
+					</div>	
+	
+				</div> <!-- cols -->
+	
+	
+		</div><!-- row -->	
+		
+	</div> <!-- intro -->
+	
+</section> <!-- showcase -->
+
+
+{% endif %}
+
+
+
+
+<div class="featured-work-wrapper">
+	
+<div class="row">
+		
+		<div class="large-8 columns">
+
+
+
+<!-- /////// SINGLE PROJECT  ///////// -->
+
+
+
+				{% if is_project %}
+					<article id="project-{{ project.id }}" class="project">
+						
+						{% if project.assets %}
+							<div class="project-assets">
+								{% for asset in project.assets %}
+									<div id="asset-{{ asset.id }}" class="{{ asset.type }}">
+										{% if asset.type == "image" %}
+											{% if vanilla_options.enable_lightbox %}
+											<a href="{{ project.permalink }}/lightbox/#{{ asset.id }}" class="view" rel="project-gallery-{{ project.id }}">
+											{% endif %}
+												<div data-picture data-alt="">
+													<div data-src="{{ asset.content_url }}"></div>
+													<div data-src="{{ asset.content_url_x2 }}" data-media="(-webkit-min-device-pixel-ratio: 2),(min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1),(min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx)"></div>
+													<!--[if (lt IE 9) & (!IEMobile)]>
+														<div data-src="{{ asset.content_url }}"></div>
+													<![endif]-->
+													<noscript>
+														<img src="{{ asset.content_url }}" alt="" />
+													</noscript>
+												</div>
+											{% if vanilla_options.enable_lightbox %}
+											</a>
+											{% endif %}
+										{% else %}
+											{{ asset.embed }}
+										{% endif %}
+
+										{% if asset.description %}<p class="asset-description">{{ asset.description }}</p>{% endif %}
+									</div>
+								{% endfor %}
+							</div>
+						{% endif %}
+
+					
+				{% endif %}
+
+
+
+<!-- ////// PAGE //////// -->
+
+
+
+				{% if is_page %}
+					<article id="page-{{ page.id }}" class="page">						
+						<div class="page-content">{{ page.content }}</div>
+					</article>
+				{% endif %}
+
+
+<!-- ////// PROJECTS FEED //////// -->
+
+				{% if is_home or is_project or is_tag %}
+					<ul class="projects-feed clearfix large-block-grid-3 small-block-grid-2 work">
+
+						{% import _self as macros %}
+						
+						{% if is_home or is_project %}
+							{% set pIndex = 0 %}
+							{% for project in projects %}
+								{{ macros.project(project, pIndex, vanilla_options) }}
+								{% set pIndex = pIndex + 1 %}
+							{% endfor %}
+						{% endif %}
+						
+						{% if is_tag %}
+							{% set pIndex = 0 %}
+							{% for project in tagged_projects %}
+								{{ macros.project(project, pIndex, vanilla_options) }}
+								{% set pIndex = pIndex + 1 %}
+							{% endfor %}
+						{% endif %}
+						
+
+						
+						
+{% macro project(project, pIndex, vanilla_options) %}
+
+							<li id="project-{{ project.id }}" class="project{% for tag in project.tags %} tag-{{ tag.slug }}{% endfor %}" data-six-column="{{ pIndex % 6 }}" data-five-column="{{ pIndex % 5 }}" data-four-column="{{ pIndex % 4 }}" data-three-column="{{ pIndex % 3 }}" data-two-column="{{ pIndex % 2 }}">
+								<a href="{{ project.permalink }}" title="{{ project.title|e }}">
+									{% if project.thumb_url %}
+										<div class="thumb">
+											<div data-picture data-alt="">
+												<div data-src="{{ project.thumb_url }}"></div>
+												{% if project.thumb_url_x2 %}<div data-src="{{ project.thumb_url_x2 }}" data-media="(-webkit-min-device-pixel-ratio: 2),(min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1),(min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx)"></div>{% endif %}
+												<!--[if (lt IE 9) & (!IEMobile)]>
+													<div data-src="{{ project.thumb_url }}"></div>
+												<![endif]-->
+												<noscript>
+													<img src="{{ project.thumb_url }}" alt="" />
+												</noscript>
+											</div>
+										</div>
+									{% else %}
+										<div class="thumb no-thumb"></div>
+									{% endif %}
+									<!-- <div class="overlay"></div> -->
+							
+							
+								{% if vanilla_options.show_thumbnail_titles %}<h3>{{ project.title }}</h3></a>{% endif %}
+								
+<!-- {% if pIndex == 0 %} 
+								{% if project.description %}<div class="project-description">{{ project.description }}</div>{% endif %}
+{% endif %} -->
+
+								{% if vanilla_options.show_thumbnail_tags and project.tags %}
+									<div class="tags">
+										{% for tag in project.tags %}
+											{{ project.tags.length }}
+											<a href="{{ tag.permalink }}">{{ tag.name }}</a>{% if loop.last != true %}<span class="sep">,</span>{% endif %}
+										{% endfor %}
+									</div>
+								{% endif %}
+
+							</li>
+						{% endmacro %}
+						
+
+					<!--END .projects-feed-->
+
+					</ul>
+				{# end home/project/tag check #}
+				{% endif %}
+			
+			<!--END large-8 -->
+			</div>
+
+			<div class="large-3 large-offset-1 columns">
+			
+			{% if is_project %}
+  		
+
+<!-- PROJECT INFO -->
+
+						{% if project.description %}<div class="project-description">{{ project.description }}</div>{% endif %}
+
+						{% if vanilla_options.show_project_meta and (project.date_text or project.client or project.role or project.url or project.tags) %}
+							<footer class="project-meta">
+								{% if project.date_text %}<h4>Date</h4> <p>{{ project.date_text }}</p>{% endif %}
+								{% if project.client %}<h4>Client</h4> <p>{{ project.client }}</p>{% endif %}
+								
+								{% if project.url %}<h4>URL</h4> <p><a href="{{ project.url_escaped }}" class="url" target="_blank">{{ project.pretty_url }}<i class="genericon genericon-external"></i></a></p>{% endif %}
+								{% if project.tags %}<h4>Tags</h4> <p class="tags">{% for tag in project.tags %}<a href="{{ tag.permalink }}">{{ tag.name }}</a>{% if loop.last != true %}<span class="sep">, </span>{% endif %}{% endfor %}</p>{% endif %}
+							</footer>
+						{% endif %}
+					</article>
+
+
+<!-- END PROJECT INFO -->
+
+
+  		{% endif %}
+
+			{% if vanilla_options.show_page_menu or vanilla_options.show_project_menu or vanilla_options.show_tag_menu %}
+			<nav role="navigation">
+				{% if vanilla_options.show_page_menu and list_pages() %}
+					<h3 class="pages-nav-title nav-title"><a href="#pages-nav">Pages</a></h3>
+					{{ list_pages({ active_class: 'current-page' }) }}
+				{% endif %}
+				{% if vanilla_options.show_project_menu and list_projects() %}
+					<!-- <h3 class="nav-title"><a href="#projects-nav">Work</a></h3> -->
+
+{% if is_project %}
+				<h3 class="nav-title">Work</h3>
+
+					{{ list_projects({ active_class: 'current-project' }) }}
+
+{% endif %}
+
+{% endif %}
+				{% if vanilla_options.show_tag_menu and list_tags() %}
+					<h3 class="nav-title"><a href="#tags-nav">Tags</a></h3>
+					{{ list_tags({ active_class: 'current-tag' }) }}
+				{% endif %}
+			</nav>
+			{% endif %}
+
+	<div class="contact">
+			
+			<ul>
+				<li id="_telephone4" itemprop="telephone"><i class="genericon genericon-phone"></i> +44(0)1273 251362</li>
+				<li><a id="_email5" itemprop="email" content="paul@delargedesign.com" href="mailto:paul@delargedesign.com"><i class="genericon genericon-mail"></i> paul@delargedesign.com</a></li>
+				<li><a target="_blank" href="http://twitter.com/delarge"><i class="genericon genericon-twitter"></i> @delarge</a></li>
+				
+			</ul>
+			
+						
+</div>	<!-- contact -->
+
+
+
+		</div><!-- cols -->
+
+		<!--END .row -->
+		</div>
+
+</div> <!-- featured work wrapper -->
+
+</div> <!-- main -->
+
+<footer role="contentinfo" class="row">
+		
+		<div class="large-7 columns">
+			
+
+			
+		<div class="info">	
+		
+			
+				<script src="//cdn.delargedesign.com/js/jam.js"></script>
+				<script>Jam.Medallion.insert({"username":"delarge","image":false,"textLabel":"Listening to"});</script>
+
+			<p>Built by hand with <a href="http://mixture.io/">Mixture</a>, <a href="http://compass-style.org/">Compass</a>, <a href="http://panic.com/coda/">Coda</a> and a <a href="http://teamethod.co.uk/">nice cup of tea</a>.</p>
+			
+			<p>Delarge Ltd. is a limited company registered in England and Wales.<br /> 
+	Company Registration No.&nbsp;8400887</p> 
+		
+			<p>Registered Office: Unit 11, Hove Business Centre Fonthill Road, Hove, East Sussex, BN3&nbsp;6HA</p>	
+			
+		</div>	
+			
+						
+		</div> <!-- columns -->
+		
+		<div class="large-3 columns">
+		
+			<p>
+				<a target="_blank" href="https://launchpad.37signals.com/basecamp/signin">Client login</a>
+			</p>
+		
+		</div>
+		
+	</footer>
+
+	<!--END #wrapper-->
+	</div>
+
+	{% if is_project %}
+	<script type="text/javascript">
+	var project_assets = {{ project.assets|json_encode() }};
+	</script>
+	{% endif %}
+	<script src="{{ template_url }}scripts/jquery-1.8.3.min.js"></script>
+<script src="http://delargedesign.com/_/js/functions.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+	<script src="{{ template_url }}scripts/lib.min.js"></script>
+	<script id="dunked-admin-bar-script" data-base="{{ site_url }}" src="{{ admin_bar_js }}"></script>
+	
+</body>
+</html>
