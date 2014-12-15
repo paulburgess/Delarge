@@ -1,5 +1,42 @@
+#############################
+# Ignore OS generated files #
+#############################
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
 
-/templates/.DS_Store
+#############################
+# Ignore SASS cache #
+#############################
+*.sass-cache
 
-/.DS_Store
+#############################
+# Ignore everything in the root except the "wp-content" directory.
+#############################
+/*
+!.gitignore
+# wp-content/
+
+#############################
+# Ignore everything in the "wp-content" directory, except the "themes" directory.
+#############################
+# wp-content/*
+# !wp-content/themes/
+
+#############################
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+#############################
+# !wp-content/themes/*
+# !wp-content/themes/iae/
+# !wp-content/themes/iae-agriculture/
+# !wp-content/themes/iae-equestrian/
+# !wp-content/themes/iae-fencing/
+# !wp-content/themes/iae-shelters/
+# !wp-content/themes/iae-global/
+# !wp-content/themes/iae-division/
