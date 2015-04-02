@@ -1,0 +1,38 @@
+/* == Contact */
+
+
+.contact {
+
+
+	margin-top: em(48);
+
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		margin-bottom: 15px;
+		font-size: em(14);
+		
+		i {
+				color: $link;
+			}
+		
+		a {
+			color: $text;
+			white-space: nowrap;
+			&:hover {
+				color: $link;
+			}
+			
+		}
+		
+	}
+
+}
+
+
+/* ==== */

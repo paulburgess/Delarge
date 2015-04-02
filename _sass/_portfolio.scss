@@ -1,0 +1,321 @@
+/* ------------------------------------------- */
+/* Header */
+
+.logo {
+
+	@include breakpoint(em(1) em(767)){
+		@include grid-span(1);		
+	}
+
+
+	
+	@include breakpoint(em(768)){
+		@include grid-span(8);		
+	}
+}
+
+
+
+.work-link{
+
+	line-height: 100%;
+	
+	@include breakpoint(em(1) em(767)){
+		@include grid-span(1,2);		
+	}
+
+
+	@include breakpoint(em(768)){
+		@include grid-span(3,10);		
+	}
+
+	
+	
+	
+	font-size: 0.8em;
+	
+	
+	
+	a {
+		color: #999;
+		display: inline-block;
+		
+		@include breakpoint(em(768)){
+			margin-top: em(10);	
+		}
+
+		
+		
+		.genericon {
+			color: $link;
+		}
+		
+		
+		&:hover {
+			color: #FFF;
+
+			.genericon {
+				color: $link-hover;
+			}
+			
+			
+		}
+		
+	}
+	
+	
+	@include breakpoint(em(768)){
+		font-size: 0.8em;
+		
+	}
+
+
+	
+}
+
+
+a.url {
+	color: $link;
+	i {
+		color: #666;	
+	}
+	
+	&:hover {
+		color: $link-hover;
+		i {
+			color: #999;
+		}
+		
+	}
+	
+	
+}
+
+/* ------------------------------------------- */
+
+
+
+
+.is_single .project-assets + .work {
+
+		margin-top: 25px;
+		padding-top: 25px;
+		border-top: 1px #ccc dotted;
+	
+}
+
+
+
+body.portfolio.is_single .showcase .intro h1 {
+
+		margin: 0 0 em(10) 0;
+		
+		@include breakpoint(em(768)){
+			margin: 0;
+		}
+
+	
+} 
+
+
+
+.project-subtitle {
+		
+			
+
+
+	
+		
+		
+					
+		@include breakpoint(em(768)){
+			margin: em(10) 0 0 0;
+			font-size: em(20);
+			@include grid-span(6,7);
+		}
+
+
+		h2 {
+			color: #CCC;
+			margin: 0;	
+			
+			@include breakpoint(max-width em(767)){
+			font-size: em(16);			
+			}
+			
+			
+			@include breakpoint(em(768)){
+				font-size: em(20);
+			}
+
+					
+		}
+	
+}
+
+
+body.portfolio {
+	
+	.showcase .intro h1 {
+				
+		@include breakpoint(em(768)){
+			@include grid-span(6);
+		}
+	}
+	
+	
+	
+	h1.title{
+		line-height: em(28);
+	}
+	
+	
+
+	
+	.project-description{
+	
+		.intro {
+			font-weight: 600;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	
+	.project-assets {
+		text-align: center;
+		margin-bottom: 35px;
+		
+		.video, .image {
+			margin-bottom: 25px;
+		}
+		
+		a:hover {
+			cursor: -webkit-zoom-in;
+			cursor: -moz-zoom-in;
+			cursor: zoom-in;
+		}
+		
+	}
+	
+	
+	#projects-nav {
+		display: block !important;
+		/* Don't do hide/show fo rnow */
+	}
+	
+	ul.list-projects {
+		margin: 0 0 25px 0;
+		padding: 0;
+		
+		@include breakpoint(em(768)){
+			margin: 0 0 45px 25px;
+		}
+		
+		
+		li {
+			margin-bottom: 8px;
+			color: $link;
+			
+			&.current-project {
+				
+				a {
+					color: $link;
+				}
+				
+			}
+			
+			
+			a {
+				color: $text;
+			
+				&:hover {
+					color: $link-hover;
+				}
+				
+			}
+			
+			
+			
+		}
+		
+	}
+	
+	
+	
+	
+	.project-description {
+		
+		line-height: 150%;
+		
+		p, li {
+			font-size: em(14);
+		}
+		
+	}
+	
+	
+	.project-meta {
+		
+		padding: 0;
+		margin-bottom: em(50);
+	
+		p {
+			margin: 0;
+		}
+		
+		h4 {
+			margin: 15px 0 4px 0;
+			font-size: em(18);
+		}
+		
+	}
+	
+	.thumb img {
+		border-radius:50%;
+		}
+	
+	
+	
+	.work li {
+			
+		text-align: center;		
+		margin-bottom: 0;
+		
+		
+		h3 {
+			font-size: em(16);
+
+		}
+		
+		img {
+			position: static;
+			float:none;
+			width:100%;
+			max-width: 100%;
+			height:auto;
+			-webkit-backface-visibility: hidden;
+		}
+		
+		
+
+	}
+	
+	.work li a:hover {
+		
+		img {
+			opacity: 0.7; 
+			}
+
+		h3 {
+			color: $link-hover;			
+			-moz-transition: none;
+			 -webkit-transition: none;
+			  -o-transition: color 0 ease-in;
+			  transition: none;				
+			  }
+			
+	}
+	
+}
+
+

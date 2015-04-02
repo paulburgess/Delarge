@@ -1,0 +1,169 @@
+/* == Work */
+
+
+section.work-contact,
+.featured-work-wrapper {
+
+	@extend %wrapper;
+
+}
+
+
+
+.featured-work-wrapper {
+
+	@include breakpoint(max-width em(767)){
+		padding-top: 25px;
+	}
+
+	@include breakpoint(em(768)){
+/*
+		padding-top: 45px;
+		background: url('http://cdn.delargedesign.com/top-edge-grey.png') center top repeat-x;
+*/
+	}
+
+}
+
+.featured-work {
+
+	img {
+		border-radius: 50%;
+	}
+
+	h3 {
+		margin-bottom: em(30);
+	}
+
+	h4 {
+		font-size: em(20);
+	}
+
+
+	@include breakpoint(em(768)){
+			@include grid-span(8);
+	}
+}
+
+
+
+
+.work {
+
+		@include breakpoint(max-width em(989)){
+			@include block-grid(1);
+		}
+
+
+		@include breakpoint(em(990)){
+			@include block-grid(3);
+		}
+
+}
+
+.portfolio .work {
+
+		@include breakpoint(max-width em(989)){
+			@include block-grid(2);
+		}
+
+
+		@include breakpoint(em(990)){
+			@include block-grid(3);
+		}
+
+		img {
+			display: block;
+			margin-bottom: em(25);
+		}
+
+}
+.work {
+
+	i {
+		color: $text;
+		&:hover {
+
+		}
+	}
+
+	li {
+
+		a {
+			font-size: em(14);
+			white-space: nowrap;
+		}
+
+		a:hover i {
+			color: #999;
+		}
+
+		margin-bottom: 30px;
+
+		h4 {
+			margin-bottom: 0;
+		}
+
+		p {
+			margin-top: 6px;
+		}
+
+		img {
+			width:30%;
+			float:left;
+
+			/*
+position: relative;
+			top:30px;
+*/
+		}
+
+
+		> div {
+			width:65%;
+			float:right;
+			line-height: 150%;
+		}
+
+	}
+
+
+/* ------------------------------------------- */
+
+@include breakpoint(em(990)){
+
+	li {
+
+		a {
+			font-size: 1em;
+		}
+
+		img {
+			width:auto;
+			float:none;
+			position: static;
+			display: block;
+			margin-bottom: em(25);
+			position: relative;
+			right:8px;
+
+		}
+
+		> div {
+			width:auto;
+			float:none;
+
+			p {
+				width: 90%;
+			}
+		}
+
+	}
+
+
+
+}
+
+/* ------------------------------------------- */
+
+}

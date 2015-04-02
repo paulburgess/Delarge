@@ -1,0 +1,181 @@
+.page-header {
+	background-color: lighten(#333,6%);
+	background-image: url('//duooo52wcc4p1.cloudfront.net/show-pattern-x.jpg');
+	background-repeat: repeat-x;
+	background-position: center top;
+	margin-bottom: em(40);
+	
+	
+	> div {
+		@include wrapper;
+	}
+	
+	@include breakpoint(max-width em(767)){
+		padding: em(25) 0 em(25) 0;
+	}	
+
+	@include breakpoint(em(768)){
+		padding: em(80) 0;
+	}
+}
+
+
+/* ------------------------------------------- */
+
+h1.page-header__title {
+
+	@include breakpoint(max-width em(767)){
+		margin-bottom:0;
+		line-height: 150%;
+	}
+
+	@include breakpoint(em(768)){	
+		margin-top:em(15);	
+	}
+	
+
+	text-shadow: 1px 1px 0 rgba(0,0,0,1);
+	color: #FFF;
+	margin-bottom:0;	
+
+
+	@include breakpoint(max-width em(767)){
+		font-size: em(24);			
+	}
+	
+	@include breakpoint(em(768)){
+			
+			@include grid-span(6);
+			
+			font-size: em(42);
+						
+
+	}
+			
+	
+
+
+
+}
+
+
+.is_project h1.page-header__title {
+	margin-top: 0;
+}
+
+/* ------------------------------------------- */
+
+
+/* == Image + caption area = Intro */
+
+.page-header__intro {
+	
+	
+	
+	position: relative;
+	
+	@include breakpoint(max-width em(767)){
+		margin: em(70) 0 em(10) 0;
+	}
+	
+	@include breakpoint(em(768)){
+	
+		@include grid-span(6,7);
+		margin: 0;
+	}
+	
+}
+
+.page-header__intro img {
+	position: absolute;
+	top:-37px;
+	left:20%;
+	border-radius:50%;
+	
+	@include breakpoint(em(357) em(767)){
+
+		top: -60px;
+		left: 30%;
+		width: 290px;
+		height: auto;
+			
+	}	
+	
+	@include breakpoint(em(768)){
+		top: -130px;
+		left: 10%;
+
+	}
+	
+	
+}
+
+.page-header__intro__caption {
+
+		width: 50%;
+
+
+		@include breakpoint(max-width em(767)){
+			margin-left: 20px;
+		}
+		
+		@include breakpoint(em(768)){
+			margin:50px 0 0 0;
+		}
+
+		
+		
+		h2 {
+			font-family: Georgia, serif;
+			font-style: italic;
+			font-weight: normal;
+			font-size: em(12);
+			line-height: em(18);
+			color: $text;
+			margin: 0;
+			padding-bottom: 8px;
+			
+			
+			
+		}
+		
+		h3 {
+			
+			font-size: em(18);
+			line-height: 1.8em;
+			margin: 0;
+			@include breakpoint(em(768)){
+				font-size: em(22);
+			}
+		
+
+		}
+		
+		p {
+			margin: 0;
+			font-size: em(14);
+			line-height: em(34);
+
+		}
+		
+		/* http://dabblet.com/gist/2994237 */
+		span {
+			box-shadow: -10px 0 0 10px #fff, 10px 0 0 10px #fff;
+			background: #fff;			
+			span {
+				background: #fff;
+				position:relative;
+			}
+			
+		}
+
+		
+		> * {
+			
+			line-height: em(38);
+		}
+		
+}
+
+
+

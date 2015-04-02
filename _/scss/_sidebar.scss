@@ -1,5 +1,0 @@
-.sidebar {
-		@include breakpoint(emCalc(768)){
-		@include grid-span(3,10);
-		}
-}		
